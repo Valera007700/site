@@ -1,4 +1,4 @@
-# libram.ru static site
+# newlibram static site
 
 Static landing page prepared for local preview and GitHub Pages.
 
@@ -9,7 +9,7 @@ Public URL after enabling GitHub Pages:
 ## Structure
 
 - `index.html` is the deployable entry point for GitHub Pages.
-- `libram.ru/index.html` redirects to the root page to preserve the old path.
+- `assets/logos/` contains local SVG brand assets used by the page.
 
 ## Local run
 
@@ -33,4 +33,4 @@ Then open `http://127.0.0.1:8000/`.
 
 ## Optional custom domain
 
-If you want to publish the site on a custom domain such as `libram.ru`, add a `CNAME` file later with that domain name and configure DNS on your registrar.
+If you want to publish the site on a custom domain such as `newlibram.com`, add a `CNAME` file later with that domain name and configure DNS on your registrar.

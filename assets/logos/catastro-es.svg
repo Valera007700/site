@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 220" role="img" aria-label="Catastro ES">
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #a6a6ab; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .fill { fill: #a6a6ab; }
+      .text { fill: #a6a6ab; font: 700 22px Arial, sans-serif; }
+    </style>
+  </defs>
+  <path class="fill" d="M95 20c-16 19-31 27-51 32 10 12 16 27 16 43 15-4 25-9 35-18v26H62v21h33v26h20v-26h34v-21h-34V77c11 9 22 14 37 18 0-16 5-31 16-43-20-5-35-13-51-32l-11 13z"/>
+  <circle class="stroke" cx="95" cy="96" r="22"/>
+  <text class="text" x="95" y="192" text-anchor="middle">Catastro ES</text>
+</svg>

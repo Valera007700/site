@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" role="img" aria-label="Movilidad 9">
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #a6a6ab; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .fill { fill: #a6a6ab; }
+    </style>
+  </defs>
+  <path class="stroke" d="M86 24c29 0 52 24 52 53 0 21-11 35-26 49l-27 25"/>
+  <path class="fill" d="M53 80l19-19h16L69 80z"/>
+  <path class="fill" d="M72 80l19-19h16L88 80z"/>
+  <path class="fill" d="M91 80l19-19h16L107 80z"/>
+</svg>

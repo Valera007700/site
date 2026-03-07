@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-label="Prime Iberia">
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #a6a6ab; stroke-width: 5; stroke-linecap: round; }
+      .fill { fill: #a6a6ab; }
+      .title { fill: #a6a6ab; font: 700 68px Arial, sans-serif; letter-spacing: -2px; }
+      .sub { fill: #a6a6ab; font: 700 14px Arial, sans-serif; letter-spacing: 7px; }
+    </style>
+  </defs>
+  <path class="stroke" d="M20 58c63-29 136-44 220-44 98 0 183 16 261 47"/>
+  <text class="title" x="258" y="94" text-anchor="middle">prime iberia</text>
+  <text class="sub" x="258" y="130" text-anchor="middle">TECNOLOGIA DIGITAL</text>
+</svg>
