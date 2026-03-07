@@ -1,36 +1,36 @@
-# newlibram static site
+# sitio estatico newlibram
 
-Static landing page prepared for local preview and GitHub Pages.
+Sitio estatico preparado para vista previa local y GitHub Pages.
 
-Public URL after enabling GitHub Pages:
+URL publica despues de activar GitHub Pages:
 
 `https://valera007700.github.io/site/`
 
-## Structure
+## estructura
 
-- `index.html` is the deployable entry point for GitHub Pages.
-- `assets/logos/` contains local SVG brand assets used by the page.
+- `index.html` es el punto de entrada desplegable para GitHub Pages.
+- `assets/logos/` contiene los logotipos SVG locales usados por la pagina.
 
-## Local run
+## ejecucion local
 
-The page is static, but it depends on external Tilda CDN assets, so local preview requires internet access.
+La pagina es estatica, pero depende de recursos externos de Tilda CDN, por lo que la vista previa local requiere acceso a internet.
 
-Run from the project root:
+Ejecuta desde la raiz del proyecto:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://127.0.0.1:8000/`.
+Despues abre `http://127.0.0.1:8000/`.
 
-## GitHub Pages
+## github pages
 
-1. Push the repository to GitHub.
-2. In the repository settings, open `Pages`.
-3. Set `Build and deployment` to `Deploy from a branch`.
-4. Select the `main` branch and `/ (root)` as the folder.
-5. Save.
+1. Sube el repositorio a GitHub.
+2. En la configuracion del repositorio, abre `Pages`.
+3. Configura `Build and deployment` como `Deploy from a branch`.
+4. Selecciona la rama `main` y la carpeta `/ (root)`.
+5. Guarda los cambios.
 
-## Optional custom domain
+## dominio personalizado opcional
 
-If you want to publish the site on a custom domain such as `newlibram.com`, add a `CNAME` file later with that domain name and configure DNS on your registrar.
+Si quieres publicar el sitio en un dominio personalizado como `newlibram.com`, agrega despues un archivo `CNAME` con ese dominio y configura el DNS en tu registrador.
