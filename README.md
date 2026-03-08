@@ -10,10 +10,11 @@ URL publica despues de activar GitHub Pages:
 
 - `index.html` es el punto de entrada desplegable para GitHub Pages.
 - `assets/logos/` contiene los logotipos SVG locales usados por la pagina.
+- `assets/vendor/tilda/` contiene las copias locales de CSS, JS, fuentes e imagenes necesarias para mantener el mismo visual sin depender del CDN externo.
 
 ## ejecucion local
 
-La pagina es estatica, pero depende de recursos externos de Tilda CDN, por lo que la vista previa local requiere acceso a internet.
+La pagina es estatica y ahora usa solo recursos locales del repositorio para su renderizado.
 
 Ejecuta desde la raiz del proyecto:
 
