@@ -6,7 +6,7 @@
   <title>Mixellume | Intelligent Precision Measurement Platforms</title>
   <link rel="icon" type="image/jpeg" href="assets/mixellume-logo.jpeg">
   <meta name="description" content="Mixellume builds intelligent precision measurement platforms: metrology-grade hardware, embedded measurement intelligence, and semiconductor execution depth." />
-  <meta name="theme-color" content="#041017" />
+  <meta name="theme-color" content="#f5f5f7" />
   <script>document.documentElement.classList.add("js");</script>
   <style>
     :root {
@@ -925,6 +925,919 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
+
+    /* Business design refresh */
+    :root {
+      --bg: #f5f5f7;
+      --bg-2: #ffffff;
+      --panel: rgba(255, 255, 255, 0.94);
+      --panel-strong: #ffffff;
+      --ink: #1d1d1f;
+      --ink-soft: #3a3a3c;
+      --muted: #6e6e73;
+      --teal: #0066cc;
+      --teal-dim: rgba(0, 102, 204, 0.08);
+      --blue: #0066cc;
+      --gold: #8e8e93;
+      --gold-dim: rgba(142, 142, 147, 0.08);
+      --line: rgba(0, 0, 0, 0.14);
+      --line-soft: rgba(0, 0, 0, 0.08);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+      --radius: 8px;
+      --radius-lg: 8px;
+      --max: 1160px;
+    }
+
+    *, *::before, *::after {
+      letter-spacing: 0 !important;
+    }
+
+    body {
+      color: var(--ink);
+      background: #f5f5f7;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body::before,
+    body::after {
+      display: none;
+    }
+
+    .progress {
+      height: 2px;
+      background: #1d1d1f;
+      box-shadow: none;
+      opacity: .16;
+    }
+
+    .skip-link {
+      background: #1d1d1f;
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    .site-header {
+      background: rgba(250, 250, 252, .84);
+      border-bottom: 1px solid rgba(0, 0, 0, .08);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .nav {
+      padding: 12px 22px;
+      gap: 22px;
+    }
+
+    .brand {
+      min-width: auto;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 28px;
+      border: 1px solid rgba(0, 0, 0, .10);
+      border-radius: 7px;
+      background: #fff;
+      box-shadow: none;
+    }
+
+    .brand-mark img {
+      filter: grayscale(1) contrast(.9) brightness(1.08);
+    }
+
+    .brand-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .nav-links {
+      gap: 22px;
+      color: #424245;
+      font-size: 14px;
+      display: none;
+    }
+
+    .nav-links a::after {
+      bottom: 3px;
+      background: #1d1d1f;
+    }
+
+    .nav-cta {
+      display: none;
+      gap: 0;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border: 0;
+      background: #1d1d1f;
+      box-shadow: none;
+    }
+
+    .nav-cta .dot {
+      display: none;
+    }
+
+    main {
+      background: linear-gradient(180deg, #fff 0, #fff 660px, #f5f5f7 660px, #f5f5f7 100%);
+    }
+
+    .section {
+      padding: 96px 22px;
+    }
+
+    .hero {
+      min-height: auto;
+      max-width: var(--max);
+      padding: 92px 22px 72px;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 420px);
+      gap: 48px;
+      overflow: visible;
+    }
+
+    .hero-copy {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    #signal-canvas {
+      opacity: 0;
+    }
+
+    .hero::after {
+      display: none;
+    }
+
+    h1, h2, h3 {
+      color: var(--ink);
+    }
+
+    .eyebrow,
+    .section-kicker,
+    .passport-title small,
+    .reading .label,
+    .micro-card b,
+    .bridge-card .place,
+    .screen .state-label {
+      color: var(--muted);
+      text-transform: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      font-family: inherit;
+      font-size: 76px;
+      line-height: 1.03;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+
+    .hero h1 em {
+      color: inherit;
+      text-shadow: none;
+    }
+
+    .hero-copy .lead {
+      max-width: 720px;
+      margin-top: 26px;
+      color: var(--ink-soft);
+      font-size: 21px;
+      line-height: 1.45;
+    }
+
+    .hero-copy .lead strong {
+      color: var(--ink);
+      font-weight: 650;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+    }
+
+    .btn {
+      min-height: 44px;
+      padding: 11px 18px;
+      border: 1px solid rgba(0, 0, 0, .14);
+      color: #1d1d1f;
+      background: #fff;
+      box-shadow: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
+    }
+
+    .btn.primary {
+      color: #fff;
+      background: #0071e3;
+      border-color: #0071e3;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(0, 0, 0, .22);
+      background: #f5f5f7;
+    }
+
+    .btn.primary:hover,
+    .btn.primary:focus-visible {
+      color: #fff;
+      background: #0077ed;
+      border-color: #0077ed;
+    }
+
+    .hero-line {
+      margin-top: 42px;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .micro-card,
+    .passport,
+    .shift-panel,
+    .proof-card,
+    .console,
+    .engine-card,
+    .flow-step,
+    .bridge-card,
+    .capability-stats .stat,
+    .quote-strip {
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 10px 34px rgba(0, 0, 0, .05);
+    }
+
+    .micro-card {
+      padding: 18px;
+      min-height: 112px;
+    }
+
+    .micro-card b {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: none;
+    }
+
+    .micro-card span {
+      color: #424245;
+      font-size: 15px;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+
+    .passport {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .passport::before {
+      opacity: .04;
+      mix-blend-mode: normal;
+      filter: grayscale(1);
+    }
+
+    .passport-inner {
+      padding: 26px;
+    }
+
+    .passport-top {
+      border-bottom: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    .passport-title h2 {
+      font-size: 25px;
+      line-height: 1.18;
+      font-weight: 650;
+    }
+
+    .passport-seal {
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(0, 0, 0, .14);
+      border-radius: 8px;
+      color: #1d1d1f;
+      background: #f5f5f7;
+      box-shadow: none;
+      font-family: inherit;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .reading {
+      background: #f5f5f7;
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .reading .number {
+      color: #1d1d1f;
+      font-size: 42px;
+      text-shadow: none;
+    }
+
+    .reading .number span {
+      color: #1d1d1f;
+    }
+
+    .passport-list li {
+      border-bottom: 1px solid rgba(0, 0, 0, .08);
+      color: #424245;
+      font-size: 15px;
+    }
+
+    .passport-list b {
+      color: var(--muted);
+    }
+
+    .passport-list span {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .tailored-note {
+      color: #424245;
+      font-family: inherit;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .tailored-note strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .section-head {
+      align-items: start;
+      gap: 48px;
+      margin-bottom: 38px;
+    }
+
+    .section h2,
+    .cta h2 {
+      font-family: inherit;
+      font-size: 48px;
+      line-height: 1.08;
+      font-weight: 700;
+    }
+
+    .section-head p,
+    .cta p {
+      color: #424245;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .rule {
+      width: 120px;
+      height: 1px;
+      margin-top: 22px;
+      background: rgba(0, 0, 0, .12);
+      opacity: 1;
+    }
+
+    .split-shift {
+      gap: 16px;
+    }
+
+    .shift-panel {
+      min-height: 0;
+      padding: 26px;
+    }
+
+    .shift-panel::before,
+    .shift-panel.old::before,
+    .proof-card::after,
+    .engine-card::before,
+    .flow-step::before {
+      display: none;
+    }
+
+    .shift-panel h3 {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    .shift-panel.new h3 {
+      color: var(--ink);
+    }
+
+    .shift-list {
+      gap: 10px;
+    }
+
+    .shift-item {
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 0;
+      padding: 16px 0;
+      background: transparent;
+      color: #424245;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 650;
+    }
+
+    .shift-panel.new .shift-item {
+      color: var(--ink);
+      border-color: rgba(0, 0, 0, .08);
+    }
+
+    .shift-arrow {
+      color: #86868b;
+      font-size: 24px;
+      text-shadow: none;
+    }
+
+    .quote-strip {
+      color: #424245;
+    }
+
+    .quote-strip .mark {
+      color: #86868b;
+      font-family: inherit;
+      font-size: 32px;
+    }
+
+    .quote-strip p {
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 24px;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .stack-visual,
+    .intelligence-card,
+    .bridge {
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .stack-visual {
+      min-height: 520px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .90)),
+        url('assets/embedded-intelligence.jpg') center/cover;
+    }
+
+    .stack-visual::before {
+      display: none;
+    }
+
+    .stack-pipeline {
+      padding: 26px;
+    }
+
+    .stack-node {
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, .04);
+    }
+
+    .stack-node:hover {
+      transform: translateY(-1px);
+      border-color: rgba(0, 0, 0, .14);
+      background: #fff;
+    }
+
+    .stack-node .num {
+      color: #86868b;
+      font-family: inherit;
+      font-style: normal;
+      font-weight: 650;
+    }
+
+    .stack-node h3 {
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .stack-node p,
+    .proof-card p,
+    .small-note,
+    .screen .state-copy,
+    .engine-card li,
+    .flow-step p,
+    .bridge-card p {
+      color: #424245;
+      line-height: 1.6;
+    }
+
+    .proof-card h3 {
+      font-size: 32px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .instrument-wrap {
+      border: 0;
+      border-radius: 8px;
+      background: #f5f5f7;
+      padding: 24px 18px;
+    }
+
+    .instrument-wrap img {
+      filter: none;
+    }
+
+    .spec-grid {
+      gap: 8px;
+    }
+
+    .spec {
+      min-height: 100px;
+      border: 0;
+      border-radius: 8px;
+      background: #f5f5f7;
+      padding: 16px 12px;
+    }
+
+    .spec b,
+    .capability-stats b {
+      color: var(--ink);
+      font-size: 26px;
+    }
+
+    .spec span,
+    .capability-stats span {
+      color: #6e6e73;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .intelligence-card {
+      background:
+        linear-gradient(180deg, rgba(29, 29, 31, .18), rgba(29, 29, 31, .82)),
+        url('assets/semiconductor-depth.jpg') center/cover;
+    }
+
+    .intelligence-card::before {
+      display: none;
+    }
+
+    .intelligence-card h3 {
+      color: #fff;
+      font-family: inherit;
+      font-size: 40px;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+
+    .intelligence-card p {
+      color: rgba(255, 255, 255, .84);
+      font-size: 17px;
+    }
+
+    .console-top {
+      opacity: .55;
+    }
+
+    .console-dot,
+    .console-dot:nth-child(2),
+    .console-dot:nth-child(3) {
+      background: #d2d2d7;
+    }
+
+    .console h3 {
+      font-size: 24px;
+      font-weight: 650;
+    }
+
+    .console .screen {
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 8px;
+      background: #f5f5f7;
+    }
+
+    .screen .state-value {
+      color: var(--ink);
+      font-size: 36px;
+    }
+
+    .chip {
+      border: 1px solid rgba(0, 0, 0, .12);
+      color: #424245;
+      background: #fff;
+      font-size: 14px;
+    }
+
+    .chip[aria-pressed="true"] {
+      color: #fff;
+      border-color: #1d1d1f;
+      background: #1d1d1f;
+    }
+
+    .engine-card {
+      min-height: 400px;
+    }
+
+    .engine-card h3 {
+      font-size: 34px;
+      line-height: 1.14;
+      font-weight: 700;
+    }
+
+    .engine-card li::before,
+    .engine-card.alt li::before {
+      top: .7em;
+      width: 6px;
+      height: 6px;
+      background: #86868b;
+      box-shadow: none;
+    }
+
+    .engine-connector {
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 8px;
+      background: #fff;
+      color: #424245;
+      box-shadow: 0 10px 34px rgba(0, 0, 0, .04);
+    }
+
+    .engine-connector strong {
+      color: var(--ink);
+    }
+
+    .engine-connector .symbol {
+      color: #86868b;
+      font-size: 24px;
+    }
+
+    .capability-stats {
+      gap: 10px;
+    }
+
+    .capability-stats .stat {
+      padding: 18px 14px;
+    }
+
+    .flow-step {
+      min-height: 250px;
+      padding: 24px;
+    }
+
+    .flow-step h3 {
+      margin-top: 38px;
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 650;
+    }
+
+    .flow-step .step-no {
+      color: #d2d2d7;
+      font-family: inherit;
+      font-size: 38px;
+      font-weight: 650;
+    }
+
+    .bridge {
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, .96), rgba(255, 255, 255, .84)),
+        url('assets/global-bridge.jpg') center/cover;
+      padding: 28px;
+    }
+
+    .bridge h2 {
+      max-width: 860px;
+      font-size: 44px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .bridge-grid {
+      gap: 12px;
+    }
+
+    .bridge-card {
+      min-height: 250px;
+      backdrop-filter: none;
+    }
+
+    .bridge-card .place {
+      margin-bottom: 14px;
+    }
+
+    .bridge-card h3 {
+      font-size: 24px;
+      line-height: 1.18;
+      font-weight: 650;
+    }
+
+    .cta {
+      padding: 96px 22px 88px;
+    }
+
+    .cta h2 {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, .08);
+      color: #6e6e73;
+    }
+
+    .footer-inner strong {
+      color: var(--ink);
+    }
+
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    @media (min-width: 1360px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+        gap: 36px;
+      }
+
+      .hero h1 {
+        font-size: 68px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      main {
+        background: #fff;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 72px;
+      }
+
+      .passport {
+        max-width: none;
+      }
+
+      .section-head,
+      .stack-wrap,
+      .intelligence-grid,
+      .engines {
+        grid-template-columns: 1fr;
+      }
+
+      .split-shift {
+        grid-template-columns: 1fr;
+      }
+
+      .shift-arrow {
+        padding: 0;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .nav {
+        padding-inline: 16px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero,
+      .section,
+      .cta {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .hero {
+        padding-top: 58px;
+        padding-bottom: 64px;
+        gap: 32px;
+      }
+
+      .section {
+        padding-top: 76px;
+        padding-bottom: 76px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        line-height: 1.12;
+        max-width: 340px;
+        overflow-wrap: anywhere;
+      }
+
+      .section h2,
+      .cta h2,
+      .bridge h2 {
+        font-size: 34px;
+        line-height: 1.12;
+      }
+
+      .hero-copy .lead,
+      .section-head p,
+      .cta p,
+      .intelligence-card p {
+        font-size: 16px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .hero-copy .lead,
+      .hero-line {
+        max-width: 340px;
+      }
+
+      .hero-line,
+      .spec-grid,
+      .capability-stats,
+      .daq-flow,
+      .bridge-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+
+      .hero-line {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .passport-inner,
+      .micro-card,
+      .shift-panel,
+      .proof-card,
+      .console,
+      .engine-card,
+      .bridge {
+        padding: 20px;
+      }
+
+      .passport-top {
+        flex-direction: column;
+      }
+
+      .reading .number,
+      .screen .state-value {
+        font-size: 32px;
+      }
+
+      .shift-item {
+        font-size: 22px;
+      }
+
+      .quote-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-strip p {
+        font-size: 21px;
+      }
+
+      .stack-node {
+        grid-template-columns: 48px 1fr;
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .intelligence-card {
+        min-height: 420px;
+      }
+
+      .intelligence-card h3,
+      .engine-card h3,
+      .proof-card h3 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1225,7 +2138,7 @@
   </footer>
 
   <script>
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion = true;
 
     const progress = document.querySelector('.progress');
     const updateProgress = () => {
